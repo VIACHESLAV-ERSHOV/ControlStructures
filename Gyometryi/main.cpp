@@ -277,7 +277,7 @@ void main()
 			for (int l = 0; l < n; l++)
 			{
 				
-					if ((i + l) % 2 == 0)cout << "*";
+					if ((i + l) % 2 == 0)cout << "* ";
 					else cout << " ";
 			}
 		}
@@ -286,18 +286,22 @@ void main()
 
 
 #ifdef PASCAL
+	const int width = 8;
 	int n;
 	double num = 1;
+
 	cout << "высота треугольника: "; cin >> n;
 
 	for (int i = 0; i < n; i++)
 	{
-		for (int j = 0; j < n - i; j++)cout << "\t";
-		for (int j = 0; j <= i; j++)
+		for (int j = 0; j <= n; j++)cout << "\t";
+
+		for (int j = 0; j  <= i; j++)
 		{
 			if (i > 0 && j > 0)
 				num = num * (i - j + 1) / j; cout << "\t" << num;
 		}
+		
 		cout << endl;
 	}
 
